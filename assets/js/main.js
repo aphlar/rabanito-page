@@ -80,4 +80,13 @@
 
 		}
 
+	// Header scroll effect: add 'scrolled' class when user scrolls down
+		$window.on('scroll', function() {
+			if ($window.scrollTop() > 50) {
+				$header.addClass('scrolled');
+			} else {
+				$header.removeClass('scrolled');
+			}
+		});
+
 })(jQuery);

@@ -1575,6 +1575,78 @@
 		}
 	}
 
+// --- Theme overrides: rosa palo monochrome for header, wrappers and footer ---
+
+// Header: transparent all the time, text visible only on scroll
+#header.alt {
+	background: transparent;
+	transition: opacity 0.3s ease;
+
+	h1 a,
+	#header a {
+		color: #ffffff !important;
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+
+	nav > ul > li > a {
+		color: #ffffff;
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+
+	// When scrolled, show the text
+	&.scrolled {
+		h1 a,
+		#header a {
+			opacity: 1;
+		}
+
+		nav > ul > li > a {
+			opacity: 1;
+		}
+	}
+}
+
+// Simple wrappers for the style variations used in the template
+.wrapper.style1 {
+	background: _palette(accent1, bg);
+	color: _palette(accent1, fg);
+
+	h1, h2, h3, h4, h5, h6 { color: _palette(accent1, fg-bold); }
+	a { color: _palette(accent1, fg-bold); }
+}
+
+.wrapper.style2, .wrapper.alt.style2 {
+	background: _palette(accent2, bg);
+	color: _palette(accent2, fg);
+
+	h1, h2, h3, h4, h5, h6 { color: _palette(accent2, fg-bold); }
+	a { color: _palette(accent2, fg-bold); }
+}
+
+.wrapper.style3 {
+	background: _palette(accent3, bg);
+	color: _palette(accent3, fg);
+
+	h1, h2, h3, h4, h5, h6 { color: _palette(accent3, fg-bold); }
+	a { color: _palette(accent3, fg-bold); }
+}
+
+.wrapper.style4 {
+	background: _palette(accent4, bg);
+	color: _palette(accent4, fg);
+
+	h1, h2, h3, h4, h5, h6 { color: _palette(accent4, fg-bold); }
+	a { color: _palette(accent4, fg-bold); }
+}
+
+#footer {
+	background: _palette(accent6, bg);
+	color: _palette(accent7, fg);
+	border-top: 1px solid rgba(43,23,38,0.04);
+}
+
 /* Banner */
 
 	#banner {
